@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">HallSelector</string>
+    <string name="login_reg_button">Login/Register</string>
+    <string name="welcome_title">OSU Residence Halls Selector</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="search_records_button">Search Records</string>
+    <string name="new_search_button">New Search</string>
+    <string name="map_button">Map</string>
+    <string name="logout_button">Logout</string>
 </resources>
