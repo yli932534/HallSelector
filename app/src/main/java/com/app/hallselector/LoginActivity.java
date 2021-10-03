@@ -17,6 +17,12 @@ public class LoginActivity extends AppCompatActivity {
         Log.w("MainActivity", "onCreate");
     }
 
+    public void openMain(View view){
+        Log.w("L", "hi");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -54,9 +60,6 @@ public class LoginActivity extends AppCompatActivity {
         Log.w("MainActivity", "onDestroy");
     }
 
-    public void sendMessage(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+
 
 }
