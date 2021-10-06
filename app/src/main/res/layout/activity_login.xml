@@ -23,9 +23,10 @@
 
     <TextView
         android:id="@+id/welcome_title"
-        android:layout_width="295dp"
-        android:layout_height="43dp"
+        android:layout_width="390dp"
+        android:layout_height="48dp"
         android:text="@string/welcome_title"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#E60C0C"
         app:layout_constraintBottom_toBottomOf="parent"

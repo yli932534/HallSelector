@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/search_records_button"
@@ -21,8 +20,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="165dp"
-        android:layout_height="49dp"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:text="@string/new_search_button"
         app:backgroundTint="#F1548A"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,8 +33,8 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="165dp"
-        android:layout_height="47dp"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:text="@string/map_button"
         app:backgroundTint="#F1548A"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,8 +46,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="161dp"
-        android:layout_height="49dp"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:text="@string/logout_button"
         app:backgroundTint="#F1548A"
         app:layout_constraintBottom_toBottomOf="parent"
