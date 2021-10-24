@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "120552272960",
+    "project_id": "osudorm",
+    "storage_bucket": "osudorm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120552272960:android:86c3b66dfd71b9cc0f1ba5",
+        "android_client_info": {
+          "package_name": "com.app.hallselector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120552272960-0t62de3vok8bqec2krnjp72avf6pq978.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4bu5ljZO2eOrkhvvOnWvdbADLrryq9EA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120552272960-0t62de3vok8bqec2krnjp72avf6pq978.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

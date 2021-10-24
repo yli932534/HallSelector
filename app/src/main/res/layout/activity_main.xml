@@ -46,17 +46,18 @@
         app:layout_constraintVertical_bias="0.471" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/change_pswd"
         android:layout_width="170dp"
-        android:layout_height="50dp"
-        android:text="@string/logout_button"
+        android:layout_height="65dp"
+        android:onClick="onClickChangePswd"
+        android:text="@string/change_pswd_botton"
         app:backgroundTint="#F1548A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.695" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -67,5 +68,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:onClick="onClickDeleteAccount"
+        android:text="@string/cancel_account_button"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

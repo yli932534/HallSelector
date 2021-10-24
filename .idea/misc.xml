@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_change_password.xml" value="0.2" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/fragment_back_to_login.xml" value="0.4" />
       </map>
     </option>

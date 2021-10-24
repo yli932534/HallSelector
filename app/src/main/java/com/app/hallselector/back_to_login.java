@@ -52,6 +52,7 @@ public class back_to_login extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.w("MainActivity", "frag onCreate");
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -62,6 +63,7 @@ public class back_to_login extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.w("MainActivity", "frag onCreateView");
         View view = inflater.inflate(R.layout.fragment_back_to_login,
                 container, false);
         Button button = (Button) view.findViewById(R.id.back_to_login);
