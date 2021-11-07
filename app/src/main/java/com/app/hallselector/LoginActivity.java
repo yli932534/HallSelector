@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Log.w("MainActivity", "onCreate");
 
         this.usernameInput = (EditText)(findViewById(R.id.username_input));
         this.passwordInput = (EditText)(findViewById(R.id.password_input));
@@ -121,38 +120,32 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.w("MainActivity", "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.w("MainActivity", "onResume");
     }
 
     @Override
     protected  void onPause() {
 
         super.onPause();
-        Log.w("MainActivity", "onPause");
     }
 
     @Override
     protected  void onStop() {
         super.onStop();
-        Log.w("MainActivity", "onStop");
     }
 
     @Override
     protected  void onRestart() {
         super.onRestart();
-        Log.w("MainActivity", "onRestart");
     }
 
     @Override
     protected  void onDestroy() {
         super.onDestroy();
-        Log.w("MainActivity", "onDestroy");
     }
 
 

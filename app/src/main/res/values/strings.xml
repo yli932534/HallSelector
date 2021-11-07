@@ -34,4 +34,9 @@
     <string name="new_password">new password</string>
     <string name="re_enter_password">re enter password</string>
     <string name="done">Done</string>
+    <string-array name="areas">
+        <item>North</item>
+        <item>South</item>
+        <item>West</item>
+    </string-array>
 </resources>

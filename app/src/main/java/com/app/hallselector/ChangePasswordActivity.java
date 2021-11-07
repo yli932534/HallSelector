@@ -44,5 +44,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
         else{
             //passwords don't match
         }
+        this.finish();
     }
 }

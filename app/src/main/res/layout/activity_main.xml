@@ -20,9 +20,10 @@
         app:layout_constraintVertical_bias="0.224" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/new_search_button"
         android:layout_width="170dp"
         android:layout_height="50dp"
+        android:onClick="onClickNewSearch"
         android:text="@string/new_search_button"
         app:backgroundTint="#F1548A"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 
@@ -81,17 +82,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void onClickNewSearch(View view){
+        Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+        intent.putExtra("username", this.username);
+        startActivity(intent);
+    }
+
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
-        Log.d("save_username", "onSave");
+        Log.w("MainActivity", "onSave");
         savedInstanceState.putString("username", this.username);
         super.onSaveInstanceState(savedInstanceState);
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        Log.d("save_username", "onRestore");
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        Log.w("MainActivity", "onRestore");
         this.username = savedInstanceState.getString("username");
     }
 }
