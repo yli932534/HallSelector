@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">HallSelector</string>
+    <string name="login_reg_button">Login/Register</string>
+    <string name="welcome_title">OSU Residence Halls Selector</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="search_records_button">Search Records</string>
+    <string name="new_search_button">New Search</string>
+    <string name="map_button">Map</string>
+    <string name="logout_button">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_to_login">back to login</string>
+    <string name="check_box_vending">Vending Machine</string>
+    <string name="check_box_microwave_n_refrigerator">Microwave/Refrigerator</string>
+    <string name="check_box_handicap">Handicap Access</string>
+    <string name="check_box_kitchen">Kitchen Facilities</string>
+    <string name="check_box_laundry">Laundry Facilities (in complex)</string>
+    <string name="check_box_ac">Air Conditioning</string>
+
+    <string name="check_box_suite">Suite/Room Bath</string>
+    <string name="check_box_studyarea">Study Area</string>
+    <string name="check_box_bike">Bike Room Accessible</string>
+    <string name="check_box_academic_year_building">Academic Year Housing</string>
+    <string name="check_box_own_trash_removal">Own Trash Removal</string>
+    <string name="check_box_game_room">Game Room</string>
+    <string name="check_box_lounge_space">Lounge Space</string>
+    <string name="change_pswd_botton">CHANGE PASSWORD</string>
+    <string name="cancel_account_button">DELETE MY ACCOUNT</string>
+    <string name="new_password">new password</string>
+    <string name="re_enter_password">re enter password</string>
+    <string name="done">Done</string>
+    <string-array name="areas">
+        <item>North</item>
+        <item>South</item>
+        <item>West</item>
+    </string-array>
 </resources>
