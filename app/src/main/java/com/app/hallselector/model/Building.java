@@ -1,5 +1,7 @@
 package com.app.hallselector.model;
 
+import java.util.Objects;
+
 public class Building {
     private String name;
     private String area;
@@ -25,6 +27,35 @@ public class Building {
     private String vending_machines;
     private String women_only;
 
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "name='" + name + '\'' +
+                ", area='" + area + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                ", address='" + address + '\'' +
+                ", hall_director='" + hall_director + '\'' +
+                ", hall_description='" + hall_description + '\'' +
+                ", academic_year_housing='" + academic_year_housing + '\'' +
+                ", air_conditioning='" + air_conditioning + '\'' +
+                ", corridor_bath='" + corridor_bath + '\'' +
+                ", game_room='" + game_room + '\'' +
+                ", handicap_access='" + handicap_access + '\'' +
+                ", kitchen_facilities='" + kitchen_facilities + '\'' +
+                ", laundry_facilities='" + laundry_facilities + '\'' +
+                ", lounge_space='" + lounge_space + '\'' +
+                ", microwave_refrigerator='" + microwave_refrigerator + '\'' +
+                ", on_site_parking='" + on_site_parking + '\'' +
+                ", own_trash_removal='" + own_trash_removal + '\'' +
+                ", ResNet='" + ResNet + '\'' +
+                ", study_areas='" + study_areas + '\'' +
+                ", suite_room_bath='" + suite_room_bath + '\'' +
+                ", vending_machines='" + vending_machines + '\'' +
+                ", women_only='" + women_only + '\'' +
+                '}';
+    }
+
     //Constructor
     public Building(String name, String area, String phone_number, String address, String hall_director,
                     String hall_description, String academic_year_housing, String air_conditioning,
@@ -38,6 +69,7 @@ public class Building {
         this.address = address;
         this.hall_director = hall_director;
         this.hall_description = hall_description;
+
         this.academic_year_housing = academic_year_housing;
         this.air_conditioning = air_conditioning;
         this.corridor_bath = corridor_bath;
@@ -60,6 +92,60 @@ public class Building {
 
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getArea(), getPhone_number(), getAddress(), getHall_director(), getHall_description(), getAcademic_year_housing(), getAir_conditioning(), getCorridor_bath(), getGame_room(), getHandicap_access(), getKitchen_facilities(), getLaundry_facilities(), getLounge_space(), getMicrowave_refrigerator(), getOn_site_parking(), getOwn_trash_removal(), getResNet(), getStudy_areas(), getSuite_room_bath(), getVending_machines(), getWomen_only());
+    }
+
+    public boolean meetBoolConditions(Building building){
+        if (this.academic_year_housing != null && !this.academic_year_housing.equals(building.getAcademic_year_housing())) {
+            return false;
+        }
+        if (this.air_conditioning != null && !this.air_conditioning.equals(building.getAir_conditioning())) {
+            return false;
+        }
+        if (this.game_room != null && !this.game_room.equals(building.getGame_room())) {
+            return false;
+        }
+        if (this.handicap_access != null && !this.handicap_access.equals(building.getHandicap_access())){
+            return false;
+        }
+        if (this.kitchen_facilities != null && !this.kitchen_facilities.equals(building.getKitchen_facilities())){
+            return false;
+        }
+        if (this.laundry_facilities != null && !this.laundry_facilities.equals(building.getLaundry_facilities())){
+            return false;
+        }
+        if (this.lounge_space != null && !this.lounge_space.equals(building.getLounge_space())){
+            return false;
+        }
+        if (this.microwave_refrigerator != null && !this.microwave_refrigerator.equals(building.getMicrowave_refrigerator())){
+            return false;
+        }
+        if (this.on_site_parking != null && !this.on_site_parking.equals(building.getOn_site_parking())){
+            return false;
+        }
+        if (this.own_trash_removal != null && !this.own_trash_removal.equals(building.getOwn_trash_removal())){
+            return false;
+        }
+        if (this.ResNet != null && !this.ResNet.equals(building.getResNet())){
+            return false;
+        }
+        if (this.study_areas != null && !this.study_areas.equals(building.getStudy_areas())){
+            return false;
+        }
+        if (this.suite_room_bath != null && !this.suite_room_bath.equals(building.getSuite_room_bath())){
+            return false;
+        }
+        if (this.vending_machines != null && !this.vending_machines.equals(building.getVending_machines())){
+            return false;
+        }
+        if (this.women_only != null && !this.women_only.equals(building.getWomen_only())){
+            return false;
+        }
+
+        return true;
+    }
 
     public String getName() {
         return name;
