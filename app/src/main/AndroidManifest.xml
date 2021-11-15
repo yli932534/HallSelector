@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HallSelector">
         <activity
+            android:name=".RatingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchResultActivity"
+            android:exported="true"
+            android:parentActivityName=".SearchActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SearchActivity" />
+        </activity>
+        <activity
             android:name=".ChangePasswordActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -30,6 +41,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -7,7 +7,11 @@
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_change_password.xml" value="0.2" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_rating.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search.xml" value="0.264" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search_result.xml" value="0.264" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/card_building_info.xml" value="0.264" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/card_ratings_comment.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/fragment_back_to_login.xml" value="0.4" />
       </map>
     </option>
