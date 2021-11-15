@@ -39,7 +39,11 @@
         <item>South</item>
         <item>West</item>
     </string-array>
+
     <string name="see_rating">See Ratings</string>
     <string name="leave_rating">leave a rating?</string>
     <string name="comment_hint">leave a comment</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

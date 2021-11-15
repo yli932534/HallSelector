@@ -1,9 +1,13 @@
 package com.app.hallselector.model;
 
+
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Objects;
 
 public class Building implements Serializable {
+
+
     private String name;
     private String area;
     private String phone_number;

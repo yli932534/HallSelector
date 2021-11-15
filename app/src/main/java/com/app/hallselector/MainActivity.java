@@ -89,6 +89,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Yi's implementation -- building intent to connect search activity and record activity
+    public void onClickNewRecord(View view){
+        Intent intent = new Intent(MainActivity.this, RecordActivity.class);
+        intent.putExtra("username", this.username);
+        startActivity(intent);
+    }
+
+
+    public void onClickNewMap(View view){
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         Log.w("MainActivity", "onSave");
