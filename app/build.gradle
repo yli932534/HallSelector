@@ -52,9 +52,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-appcheck-safetynet:16.0.0-beta03'
     implementation "androidx.cardview:cardview:1.0.0"
+
     implementation 'com.google.maps.android:android-maps-utils:2.2.3'
     implementation "androidx.core:core-ktx:+"
-
 
 
 

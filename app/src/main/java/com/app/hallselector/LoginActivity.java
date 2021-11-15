@@ -3,7 +3,9 @@ package com.app.hallselector;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +80,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
                     if (toMainPage){
+                        SharedPreferences store = getSharedPreferences("username", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = store.edit();
+                        editor.putString("username", username);
+                        editor.commit();
+
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.putExtra("username", username);
                         startActivity(intent);  //go to main page (activity)
