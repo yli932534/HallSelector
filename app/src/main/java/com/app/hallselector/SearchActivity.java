@@ -23,9 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
 import java.io.Serializable;
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -39,7 +37,6 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
     private DatabaseReference building_ref;
     private DatabaseReference record_ref;
     private Building sample;
-
     public List<Building> search_result;
     public List<String> filters;
 
@@ -52,9 +49,7 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         this.username = intent.getStringExtra("username");
         this.building_ref = FirebaseDatabase.getInstance().getReference().child("buildings");
         this.record_ref = FirebaseDatabase.getInstance().getReference().child("search_records");
-
         this.sample = new Building();
-
         this.search_result = new LinkedList<>();
         this.filters = new LinkedList<>();
 
@@ -84,97 +79,6 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();
-
-
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.checkBox_vending:
-                if (checked){
-
-                }
-                // Remove the meat
-                break;
-            case R.id.checkBox_microwave:
-
-                break;
-
-        }
-    }
-
-    //new search
-    public void onClickDone(View view){
-        this.search_result = new LinkedList<>();  // remove the search results of last time
-        Building sample = new Building();
-        sample.setResNet("true");
-        sample.setAir_conditioning("true");
-        sample.setStudy_areas("true");
-
-        this.building_ref.orderByChild("area").equalTo(this.area)
-                .addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
-                        Log.d("search", dataSnapshot.getKey());
-                        Building current = dataSnapshot.getValue(Building.class);
-                        if (sample.meetBoolConditions(current)){
-                            search_result.add(current);
-                        }
-
-                    }
-
-                    @Override
-                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Log.d("search", "onChildChanged");
-                    }
-
-                    @Override
-                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-                        Log.d("search", "onChildRemoved");
-                    }
-
-                    @Override
-                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Log.d("search", "onChildMoved");
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Log.d("search", "onCancelled");
-                    }
-
-                });
-
-        this.building_ref.addListenerForSingleValueEvent(new ValueEventListener(){
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                addSearchRecords();
-                Log.d("search", search_result.toString());
-
-            }
-
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-
-
-
-    }
-
-    private void getBuildings(){
-
-
-    }
-
-    private void addSearchRecords(){
-        this.filters.add("vending machine");
-        this.filters.add(this.area);
-        DatabaseReference id = this.record_ref.push();
-        this.record_ref.child(id.getKey()).setValue(new Search_Record(this.username, new Date(), this.filters, this.search_result));
-
 
         // Check which checkbox was clicked
         switch(view.getId()) {
