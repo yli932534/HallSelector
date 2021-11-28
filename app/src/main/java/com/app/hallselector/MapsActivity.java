@@ -10,6 +10,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -37,7 +38,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//refer to git@github.com:mitchtabian/Google-Maps-Google-Places.git
+//refer to https://github.com/mitchtabian/Google-Maps-Google-Places/tree/ab0337bee4f658c8708bf89ef7672bdf5de8669a
 public class MapsActivity extends MainActivity implements OnMapReadyCallback {
 
     @Override
@@ -109,6 +110,16 @@ public class MapsActivity extends MainActivity implements OnMapReadyCallback {
                 return false;
             }
         });
+
+        mGps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "onClick: clicked gps icon");
+                getDeviceLocation();
+            }
+        });
+
+
         hideSoftKeyboard();
     }
 
@@ -174,7 +185,7 @@ public class MapsActivity extends MainActivity implements OnMapReadyCallback {
     private void moveCamera(LatLng latLng, float zoom, String title){
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude );
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
-        hideSoftKeyboard();
+        //hideSoftKeyboard();
         if(!title.equals("My Location")){
             MarkerOptions options = new MarkerOptions()
                     .position(latLng)
@@ -182,7 +193,7 @@ public class MapsActivity extends MainActivity implements OnMapReadyCallback {
             mMap.addMarker(options);
         }
 
-
+        hideSoftKeyboard();
     }
 
     private void initMap(){
@@ -240,9 +251,17 @@ public class MapsActivity extends MainActivity implements OnMapReadyCallback {
     }
 
     private void hideSoftKeyboard(){
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(mSearchText.getWindowToken(), 0);
     }
+
+
+      /* InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mSearchText.getWindowToken(), 0);
+    }*/
+
+
+
 
     /*public void onMapSearch(View view) {
         EditText locationSearch = (EditText) findViewById(R.id.editText);

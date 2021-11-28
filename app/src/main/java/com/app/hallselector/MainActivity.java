@@ -1,12 +1,11 @@
 package com.app.hallselector;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -93,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClickNewRecord(View view){
         Intent intent = new Intent(MainActivity.this, RecordActivity.class);
         intent.putExtra("username", this.username);
+        startActivity(intent);
+    }
+
+    public void onClickNewVideo(View view){
+        Intent intent = new Intent(MainActivity.this, VideoActivity.class);
         startActivity(intent);
     }
 

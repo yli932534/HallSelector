@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fontFamily="@font/a"
     tools:context=".RecordActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recordActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fontFamily="@font/a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
