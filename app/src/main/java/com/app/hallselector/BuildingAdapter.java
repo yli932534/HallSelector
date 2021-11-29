@@ -2,13 +2,10 @@ package com.app.hallselector;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Rating;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -87,11 +84,11 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull BuildingAdapter.ViewHolder holder, int position) {
-        holder.getBuilding_name().setText(this.search_results.get(position).getName());
-        holder.getBuilding_address().setText(this.search_results.get(position).getAddress());
-        holder.getBuilding_phone().setText(this.search_results.get(position).getPhone_number());
-        holder.getBuilding_director().setText(this.search_results.get(position).getHall_director());
-        holder.getBuilding_description().setText(this.search_results.get(position).getHall_description());
+        holder.getBuilding_name().setText("name: "+this.search_results.get(position).getName());
+        holder.getBuilding_address().setText("location: "+this.search_results.get(position).getAddress());
+        holder.getBuilding_phone().setText("number "+this.search_results.get(position).getPhone_number());
+        holder.getBuilding_director().setText("hall director: "+this.search_results.get(position).getHall_director());
+        holder.getBuilding_description().setText("description: "+this.search_results.get(position).getHall_description());
     }
 
     @Override
