@@ -14,26 +14,32 @@ import androidx.appcompat.app.AppCompatActivity;
 public class VideoLocalActivity extends AppCompatActivity {
 
     VideoView vid;
+    MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_local);
+        vid = (VideoView) findViewById(R.id.videoView);
 
+    }
 
-
+    @Override
+    protected  void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
     }
 
         public void playVideo(View v) {
             MediaController m = new MediaController(this);
-            vid = (VideoView) findViewById(R.id.videoView);
-            vid.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.a);
-            MediaController mediaController = new MediaController(this);
-            vid.setMediaController(mediaController);
-            vid.start();
             vid.setMediaController(m);
+            // vid.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.a);
+            String path = "android.resource://" + getPackageName() + "/" + R.raw.a;
+            Uri u = Uri.parse(path);
 
+            vid.setVideoURI(u);
             vid.start();
-            MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio);
             mediaPlayer.start();
         }
 
