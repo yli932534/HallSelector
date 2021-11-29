@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RatingActivity">
+    tools:context=".RatingActivity"
+    android:id="@+id/rating_layout">
 
     <TextView
         android:id="@+id/leaveRating"

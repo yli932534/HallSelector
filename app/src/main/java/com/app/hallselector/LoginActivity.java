@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
         this.usernameInput = (EditText)(findViewById(R.id.username_input));
         this.passwordInput = (EditText)(findViewById(R.id.password_input));
         this.db = FirebaseDatabase.getInstance().getReference(); //get a reference of database
+
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.login_layout).setBackgroundColor(color);
     }
 
     public void openMain(View view){
@@ -67,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                         toMainPage = true;
                     }
                     else
-                        { //the username exists in db
+                    { //the username exists in db
                         //need to login
                         boolean verify = user.getPassword().equals(password);
                         //check if the entered password == the password in db

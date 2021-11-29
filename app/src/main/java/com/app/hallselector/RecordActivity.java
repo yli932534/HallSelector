@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -99,6 +102,9 @@ public class RecordActivity extends AppCompatActivity {
 
             }
         });
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.record_layout).setBackgroundColor(color);
     }
 
 

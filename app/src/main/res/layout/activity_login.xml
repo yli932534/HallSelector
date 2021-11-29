@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="false"
-    android:background="#F4BFD1"
+    android:background="#FFE4E9"
     android:onClick="registerOrLogin"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:id="@+id/login_layout">
 
     <Button
         android:id="@+id/entry_button"
@@ -23,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
+        app:layout_constraintVertical_bias="0.865" />
 
     <TextView
         android:id="@+id/welcome_title"
@@ -40,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <EditText
         android:id="@+id/password_input"
@@ -50,7 +51,6 @@
         android:ems="10"
         android:fontFamily="@font/a"
         android:hint="@string/password_hint"
-        android:hintTextColor="#6D4C41"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

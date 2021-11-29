@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.Rating;
 import android.os.Bundle;
 import android.util.Log;
@@ -81,6 +82,10 @@ public class RatingActivity extends AppCompatActivity {
 
         this.rating_ref = FirebaseDatabase.getInstance().getReference().child("rating_records");
         loadRatingsAndComments();
+
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.rating_layout).setBackgroundColor(color);
     }
 
     public void onClickSendRatingAndComment(View view){
