@@ -51,8 +51,8 @@
 
             <TextView
                 android:id="@+id/building_description"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
+                android:layout_width="263dp"
+                android:layout_height="103dp"
                 android:layout_marginTop="16dp"
                 android:text="TextView"
                 card_view:layout_constraintEnd_toEndOf="parent"
@@ -61,24 +61,15 @@
                 card_view:layout_constraintTop_toBottomOf="@+id/building_director" />
 
             <TextView
-                android:id="@+id/building_phone"
-                android:layout_width="260dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintHorizontal_bias="0.505"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toBottomOf="@+id/building_address" />
-
-            <TextView
                 android:id="@+id/building_director"
                 android:layout_width="260dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:text="TextView"
                 card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.503"
                 card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toBottomOf="@+id/building_phone" />
+                card_view:layout_constraintTop_toBottomOf="@+id/building_address" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
