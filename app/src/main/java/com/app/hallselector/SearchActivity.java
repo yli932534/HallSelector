@@ -219,41 +219,40 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
     public void onClickDone(View view){
         this.search_result = new LinkedList<>();  // remove the search results of last time
 
-        this.building_ref.orderByChild("area").equalTo(this.area)
-                .addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
-                        Log.d("search", dataSnapshot.getKey());
-                        Building current = dataSnapshot.getValue(Building.class);
-                        if (sample.meetBoolConditions(current)){
-                            search_result.add(current);
-                        }
+        ChildEventListener e = new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
+                Log.d("search", dataSnapshot.getKey());
+                Building current = dataSnapshot.getValue(Building.class);
+                if (sample.meetBoolConditions(current)){
+                    search_result.add(current);
+                }
 
-                    }
+            }
 
-                    @Override
-                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Log.d("search", "onChildChanged");
-                    }
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("search", "onChildChanged");
+            }
 
-                    @Override
-                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-                        Log.d("search", "onChildRemoved");
-                    }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                Log.d("search", "onChildRemoved");
+            }
 
-                    @Override
-                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Log.d("search", "onChildMoved");
-                    }
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("search", "onChildMoved");
+            }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Log.d("search", "onCancelled");
-                    }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.d("search", "onCancelled");
+            }
 
-                });
+        };
 
-        this.building_ref.addListenerForSingleValueEvent(new ValueEventListener(){
+        ValueEventListener listener = new ValueEventListener(){
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -262,15 +261,22 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
                 Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
                 intent.putExtra("search_result", (Serializable)search_result);
                 //ref: https://stackoverflow.com/questions/12092612/pass-list-of-objects-from-one-activity-to-other-activity-in-android
+                building_ref.removeEventListener(e);
                 startActivity(intent);
             }
 
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                building_ref.removeEventListener(e);
             }
-        });
+        };
+
+        this.building_ref.orderByChild("area").equalTo(this.area)
+                .addChildEventListener(e);
+
+        this.building_ref.addListenerForSingleValueEvent(listener);
+        building_ref.removeEventListener(listener);
 
 
 
@@ -288,5 +294,20 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         this.record_ref.child(id.getKey()).setValue(new Search_Record(this.username, new Date(), this.filters, this.search_result));
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.gc();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
 }

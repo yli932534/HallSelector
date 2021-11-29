@@ -41,7 +41,15 @@ public class SearchResultActivity extends AppCompatActivity {
         findViewById(R.id.search_result_layout).setBackgroundColor(color);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
 
 

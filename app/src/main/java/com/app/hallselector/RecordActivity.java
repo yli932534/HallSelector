@@ -144,6 +144,15 @@ public class RecordActivity extends AppCompatActivity {
         Log.w("RecordActivity", "onDestroy");
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
     }
 

@@ -12,8 +12,8 @@
 
     <Button
         android:id="@+id/entry_button"
-        android:layout_width="175dp"
-        android:layout_height="78dp"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
         android:fontFamily="@font/a"
         android:onClick="openMain"
         android:text="@string/login_reg_button"
@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <TextView
         android:id="@+id/welcome_title"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <EditText
         android:id="@+id/password_input"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+        app:layout_constraintVertical_bias="0.61" />
 
     <EditText
         android:id="@+id/username_input"

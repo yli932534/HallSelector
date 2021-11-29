@@ -4,18 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout-land/activity_rating.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout-land/activity_search.xml" value="0.4" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_change_password.xml" value="0.2" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_main_horizontal.xml" value="0.14628623188405798" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_maps.xml" value="0.14628623188405798" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_rating.xml" value="0.264" />
-        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_record.xml" value="0.129981884057971" />
-        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search.xml" value="0.1" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_record.xml" value="0.264" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_search_result.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/activity_video.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/card_building_info.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/card_ratings_comment.xml" value="0.264" />
         <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/fragment_back_to_login.xml" value="0.4" />
-        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/item.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/18364/StudioProjects/HallSelector/app/src/main/res/layout/item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.19021739130434784" />
         <entry key="app/src/main/res/layout/activity_record.xml" value="0.25" />

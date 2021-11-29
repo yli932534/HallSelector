@@ -88,6 +88,16 @@ public class RatingActivity extends AppCompatActivity {
         findViewById(R.id.rating_layout).setBackgroundColor(color);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
     public void onClickSendRatingAndComment(View view){
         SharedPreferences store = getSharedPreferences("username", Context.MODE_PRIVATE);
         String username = store.getString("username", "unknown user");
@@ -213,5 +223,7 @@ public class RatingActivity extends AppCompatActivity {
         public int getItemCount() {
             return this.ratings_and_comments.size();
         }
+
+
     }
 }
