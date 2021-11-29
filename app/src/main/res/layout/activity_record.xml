@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fontFamily="@font/a"
-    tools:context=".RecordActivity">
+    tools:context=".RecordActivity"
+    android:id="@+id/record_layout">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recordActivity"

@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,7 +36,9 @@ public class SearchResultActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         //ref: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
 
-
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.search_result_layout).setBackgroundColor(color);
     }
 
 

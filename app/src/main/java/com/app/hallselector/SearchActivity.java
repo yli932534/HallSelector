@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import com.app.hallselector.model.Building;
@@ -62,6 +66,10 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.search_layout).setBackgroundColor(color);
     }
 
     @Override

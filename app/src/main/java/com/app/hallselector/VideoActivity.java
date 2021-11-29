@@ -1,6 +1,9 @@
 package com.app.hallselector;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,5 +34,8 @@ public class VideoActivity extends AppCompatActivity {
             youTubePlayer.loadVideo(videoId, 0);
         }
     });
+        SharedPreferences store = getSharedPreferences("bk_color", Context.MODE_PRIVATE);
+        int color = store.getInt("bk_color", Color.parseColor("#FFE4E9"));
+        findViewById(R.id.video_layout).setBackgroundColor(color);
 }
 }
