@@ -1,7 +1,9 @@
 package com.app.hallselector;
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -16,19 +18,23 @@ public class VideoLocalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_local);
-        vid = (VideoView) findViewById(R.id.videoView);
+
+
 
     }
+
         public void playVideo(View v) {
             MediaController m = new MediaController(this);
-            vid.setMediaController(m);
-           // vid.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.a);
-            String path = "android.resource://" + getPackageName() + "/" + R.raw.a;
-            Uri u = Uri.parse(path);
-
-            vid.setVideoURI(u);
+            vid = (VideoView) findViewById(R.id.videoView);
+            vid.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.a);
+            MediaController mediaController = new MediaController(this);
+            vid.setMediaController(mediaController);
             vid.start();
+            vid.setMediaController(m);
 
+            vid.start();
+            MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio);
+            mediaPlayer.start();
         }
 
 
