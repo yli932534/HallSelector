@@ -9,11 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -143,7 +141,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         startActivity(intent);
     }
 
-
+    public void onClickNewLocalVideo(View view){
+        Intent intent = new Intent(MainActivity.this, VideoLocalActivity.class);
+        startActivity(intent);
+    }
     public void onClickNewMap(View view){
         Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         startActivity(intent);
