@@ -1,17 +1,17 @@
 package com.app.hallselector;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Context;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.content.Context;
-import java.util.ArrayList;
-import java.util.Date;
 
-import android.view.LayoutInflater;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.app.hallselector.model.Search_Record;
+
+import java.util.ArrayList;
 
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
@@ -57,6 +57,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
        this.date = itemView.findViewById(R.id.date_input);
        this.building = itemView.findViewById(R.id.buildings_input);
        this.filter = itemView.findViewById(R.id.filter_input);
+
    }
   }
 
