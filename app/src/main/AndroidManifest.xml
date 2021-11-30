@@ -83,6 +83,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:exported="false"
             android:parentActivityName=".LoginActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
