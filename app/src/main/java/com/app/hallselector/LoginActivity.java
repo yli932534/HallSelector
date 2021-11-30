@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.app.hallselector.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -48,6 +49,15 @@ public class LoginActivity extends AppCompatActivity {
         String username = usernameInput.getText().toString(); //get username & password
         String password = passwordInput.getText().toString();
 
+        if (username.isEmpty()){
+            Toast.makeText(getApplicationContext(), "username is empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if (password.isEmpty()){
+            Toast.makeText(getApplicationContext(), "password is empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //DatabaseReference db = FirebaseDatabase.getInstance().getReference(); //get a reference of database
         this.db.child("users").child(username).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -70,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         // need to register
                         register(username, password);
                         toMainPage = true;
+                        Toast.makeText(getApplicationContext(), "successfully registered", Toast.LENGTH_SHORT).show();
                     }
                     else
                     { //the username exists in db
@@ -81,10 +92,12 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("Login", password);
                         Log.d("Login", Boolean.toString(verify));
                         Log.d("Login", Boolean.toString(toMainPage));
+
                     }
 
 
                     if (toMainPage){
+                        Toast.makeText(getApplicationContext(), "successfully log in", Toast.LENGTH_SHORT).show();
                         SharedPreferences store = getSharedPreferences("username", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = store.edit();
                         editor.putString("username", username);
@@ -93,6 +106,9 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.putExtra("username", username);
                         startActivity(intent);  //go to main page (activity)
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Please check your username/password", Toast.LENGTH_SHORT).show();
                     }
 
                 }
