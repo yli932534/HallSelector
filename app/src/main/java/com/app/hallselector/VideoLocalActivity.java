@@ -31,7 +31,7 @@ public class VideoLocalActivity extends AppCompatActivity {
 
         public void playVideo(View v) {
             MediaController m = new MediaController(this);
-            vid.setMediaController(m);
+            //vid.setMediaController(m);
             // vid.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.a);
             String path = "android.resource://" + getPackageName() + "/" + R.raw.a;
             Uri u = Uri.parse(path);
