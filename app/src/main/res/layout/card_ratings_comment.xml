@@ -23,6 +23,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="TextView"
+                android:autoSizeTextType="uniform"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 card_view:layout_constraintStart_toStartOf="parent"
@@ -35,6 +36,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:text="TextView"
+                android:autoSizeTextType="uniform"
                 android:textSize="20sp"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toBottomOf="@+id/user_name_rating" />
@@ -46,6 +48,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="32dp"
                 android:text="TextView"
+                android:autoSizeTextType="uniform"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -56,6 +59,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="TextView"
+                android:autoSizeTextType="uniform"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toBottomOf="@+id/rating_number" />
         </androidx.constraintlayout.widget.ConstraintLayout>
